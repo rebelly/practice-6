@@ -31,7 +31,6 @@ public class Program
 
 
             }
-            Console.WriteLine(i);
             for (int j = 0; j < i; j++)
             {
                 Console.WriteLine($"{i}{i}{j}");
