@@ -1,7 +1,24 @@
 using System;
 
 public class Program {
-    static int sec()
+        static void first()
+    {
+        Console.WriteLine("\t\t    Таблица Пифагора");
+        Console.WriteLine("  |2\t3\t4\t5\t6\t7\t8\t9");
+        Console.WriteLine("__|_______________________________________________________");
+        for (int i = 2; i < 10; i++)
+            {
+                Console.Write($" {i}|");
+                for (int j = 2; j <= 9; j++)
+                {
+                    Console.Write($"{i * j}\t");
+                }
+                Console.WriteLine();
+            }
+            Console.ReadLine();
+        
+    }
+    static void sec()
     {
         for (int i = 1; i <= 9; i++)
         {
@@ -10,7 +27,6 @@ public class Program {
                 Console.WriteLine($"{i}{i}{j}");
             }
         }
-        return 0;
     }
     static float third_path(int n)
     {
