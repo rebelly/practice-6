@@ -24,16 +24,21 @@ public class Program
         for (int i = 1; i <= 9; i++)
         {
             Console.WriteLine($"{i}00");
-            for (int j = 0; j <= i - 1; j++)
+            for (int j = i+1; j <= 9; j++)
             {
                 Console.WriteLine($"{i}{j}{i}");
+                Console.WriteLine($"{i}{i}{j}");
+
 
             }
-            for (int j = 0; j <= 9; j++)
+            Console.WriteLine(i);
+            for (int j = 0; j < i; j++)
             {
                 Console.WriteLine($"{i}{i}{j}");
-                
-            }
+                Console.WriteLine($"{i}{j}{i}");
+
+            } 
+            Console.WriteLine($"{i}{i}{i}");
 
         }
     }
