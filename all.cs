@@ -1,31 +1,40 @@
 using System;
 
-public class Program {
-        static void first()
+public class Program
+{
+    static void first()
     {
         Console.WriteLine("\t\t    Таблица Пифагора");
         Console.WriteLine("  |2\t3\t4\t5\t6\t7\t8\t9");
         Console.WriteLine("__|_______________________________________________________");
         for (int i = 2; i < 10; i++)
+        {
+            Console.Write($" {i}|");
+            for (int j = 2; j <= 9; j++)
             {
-                Console.Write($" {i}|");
-                for (int j = 2; j <= 9; j++)
-                {
-                    Console.Write($"{i * j}\t");
-                }
-                Console.WriteLine();
+                Console.Write($"{i * j}\t");
             }
-            Console.ReadLine();
-        
+            Console.WriteLine();
+        }
+        Console.ReadLine();
+
     }
     static void sec()
     {
         for (int i = 1; i <= 9; i++)
         {
+            Console.WriteLine($"{i}00");
+            for (int j = 0; j <= i - 1; j++)
+            {
+                Console.WriteLine($"{i}{j}{i}");
+
+            }
             for (int j = 0; j <= 9; j++)
             {
                 Console.WriteLine($"{i}{i}{j}");
+                
             }
+
         }
     }
     static float third_path(int n)
@@ -33,7 +42,7 @@ public class Program {
         float path = 0f;
         for (int i = 1; i <= n; i++)
         {
-            path+=1/(float)i;
+            path += 1 / (float)i;
         }
         return path;
     }
